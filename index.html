@@ -1,18 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar"></nav>
+    </header>
+
     <main id="main-doc">
-        <section class="main-section">
-            <header></header>
-        </section>
-        <section class="main-section"></section>
-        <section class="main-section"></section>
+      <section id="introduction" class="main-section">
+        <header>
+          <h2>Introducción</h2>
+        </header>
+        <p>
+          Es impresionante lo que en la actualidad se puede lograr con un sitio web. Puede crear sitios o aplicaciones web que parezcan aplicaciones nativas, pero que se ejecuten en el explorador web. Si le interesa empezar hoy mismo con el
+          desarrollo web, puede encontrarse ante un conjunto abrumador de opciones. En este módulo, se mostrarán los componentes básicos de un sitio web y las herramientas que puede usar para iniciar el desarrollo web. Usará HTML, CSS y JavaScript en
+          conjunto para crear un sitio web sencillo y usará las herramientas de desarrollo del explorador para entender lo que ocurre. Con este conocimiento fundamental, tendrá un contexto mejor para tomar decisiones en el futuro sobre varios
+          aspectos, como elegir marcos de JavaScript para crear el sitio web.
+        </p>
+      </section>
+      <section id="web_page" class="main-section">
+        <header>
+          <h2>Página web</h2>
+        </header>
+        <p>
+          En una página web, el lenguaje de marcado de hipertexto (HTML) proporciona el contenido, las hojas de estilos en cascada (CSS) definen el aspecto de la página y JavaScript se usa para proporcionar interactividad con el usuario, es decir, su
+          lógica de negocios.
+        </p>
+        <p>
+          El contenido, el estilo y la lógica de negocios se separan en archivos HTML, CSS y JavaScript, respectivamente. Un principio de diseño en la programación moderna es la separación de los intereses. Dos de los muchos motivos para separar los
+          intereses son la simplicidad y la reutilización. Por ejemplo, al aplicar estilos a los elementos mediante CSS, puede aplicar estilos a todos los elementos de una página, independientemente de la complejidad de la página, en lugar de
+          codificar la apariencia por separado dentro de cada elemento HTML.
+        </p>
+      </section>
+      <section id="html" class="main-section">
+        <header>
+          <h2>HTML</h2>
+        </header>
+        <p>
+          El objetivo es usar el lenguaje de marcado de hipertexto (HTML) para describir la página web que el explorador debe mostrar. ¿No sería buena idea tener una plantilla inicial? De forma cómoda, los editores pueden rellenar automáticamente
+          parte del texto reutilizable o la estructura HTML típica. Ha habido diferentes versiones de HTML. El tipo de documento
+          <code>&lt;!DOCTYPE html&gt;</code>
+          indica que se trata de código de HTML5.
+        </p>
+        <p>
+          Si bien no vamos a profundizar demasiado en el significado de todos los elementos HTML, sí señalaremos algunos elementos importantes. La etiqueta
+          <code>meta</code>
+          indica información de metadatos que normalmente no será visible para el lector a menos que vea el código fuente en su explorador. Los elementos o etiquetas meta proporcionan información descriptiva sobre la página web. Por ejemplo, ayudan a
+          los motores de búsqueda a mostrar resultados.
+        </p>
+        <p>
+          El juego de caracteres (charset) UTF-8 puede parecer insignificante, pero es fundamental para establecer cómo se interpretan los caracteres en los equipos. Si falta, charset puede poner en riesgo la seguridad. Detrás de charset hay mucha
+          historia e información técnica. Aquí, lo más importante es que ese texto reutilizable proporciona algunos valores predeterminados significativos.
+        </p>
+      </section>
+      <section id="css" class="main-section">
+        <header>
+          <h2>CSS</h2>
+        </header>
+        <p>
+          Las Hojas de estilos en cascada (CSS) le permiten especificar la apariencia de la página. La idea básica consiste en seleccionar código HTML como destino y, después, definir cuál debe ser el estilo. Por ejemplo, puede seleccionar un cuadro
+          y aplicarle esquinas redondeadas o asignarle un fondo degradado. La CSS se encarga de determinar la apariencia y respuesta de los hipervínculos cuando se interactúa con ellos, aunque la dirección de destino se define en HTML. En CSS3,
+          también puede realizar efectos de animación sofisticados.
+        </p>
+        <p>Para enlazar un archivo CSS externo desde HTML se debe usar la siguiente etiqueta dentro del head, con el nombre del archivo CSS.</p>
+        <pre>
+            <code>&lt;link rel="stylesheet" href="main.css"&gt;</code>
+        </pre>
+        <h3>Reglas de CSS</h3>
+        <p>
+          Imagine que tiene una llave muy antigua y una serie de puertas a lo largo de un pasillo extenso. En primer lugar, selecciona una puerta y la abre con la llave. Tras entrar en una habitación, puede decorarla como quiera. Puede pintar las
+          paredes de azul o elegir madera para los suelos. Selecciona una habitación y define reglas para el aspecto que debe tener. Puede aplicar el mismo estilo a varias salas, lo mismo que en CSS. Veamos el siguiente ejemplo.
+        </p>
+        <pre>
+            <code>
+                body {
+                    font-family: monospace;
+                }
+                
+                ul {
+                    font-family: helvetica;
+                }
+
+                li {
+                    list-style: circle;
+                }
+                  
+                .list {
+                list-style: square;
+                }
+                
+                #msg {
+                font-family: monospace;
+                }
+            </code>
+        </pre>
+        <p>
+            Puede usar reglas de CSS para aplicar estilo al código HTML. El elemento de lista sin ordenar <code>ul {}</code> es un selector que selecciona el elemento HTML <code>&lt;ul&gt;</code> al que aplicar estilos. La declaración es <code>font-family: helvetica</code> y determina cuál debe ser el estilo. El nombre de la propiedad es <code>font-family</code> y el valor es <code>helvetica</code>. Juntos, la propiedad y el valor constituyen un par clave-valor. Lo que se selecciona es un elemento existente que se ha definido antes en HTML (<code>&lt;body&gt;</code> y <code>&lt;ul&gt;</code>). 
+        </p>
+        <p>
+            Los identificadores y los selectores de clase permiten aplicar estilos a los nombres de atributo personalizados en el código HTML. Un identificador se usa para definir el estilo de un elemento, mientras que las clases pueden aplicar estilos a varios elementos. En el ejemplo anterior, el selector de clases list tiene un prefijo de punto, mientras que el selector de Id. es msg y tiene un prefijo de signo de libra. Los nombres pueden ser arbitrarios, siempre que coincidan con lo que haya definido en el código HTML.
+        </p>
+      </section>
+      <section id="" class="main-section">
+        <header></header>
+      </section>
+      <section id="" class="main-section">
+        <header></header>
+      </section>
     </main>
-</body>
+  </body>
 </html>
