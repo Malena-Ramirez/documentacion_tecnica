@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang='es'>
+<html lang="es">
   <head>
-    <meta charset='UTF-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introducción al desarrollo web</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <nav id='navbar'>
-          <header>
-              <h1>Introducción al desarrollo web</h1>
-          </header>
-          <ul>
-              <li><a href='#introduction' class='nav-link'>Introducción</a></li>
-              <li><a href='#web_page' class='nav-link'>Página web</a></li>
-              <li><a href='#html' class='nav-link'>HTML</a></li>
-              <li><a href='#css' class='nav-link'>CSS</a></li>
-              <li><a href='#javascript' class='nav-link'>JavaScript</a></li>
-              <li><a href='#bonus_objects' class='nav-link'>Bonus: Objetos</a></li>
-          </ul>
+    <header id="main-header">
+      <nav id="navbar">
+        <header>
+          <h1>Introducción al desarrollo web</h1>
+        </header>
+        <ul>
+          <li><a href="#introduction" class="nav-link">Introducción</a></li>
+          <li><a href="#web_page" class="nav-link">Página web</a></li>
+          <li><a href="#html" class="nav-link">HTML</a></li>
+          <li><a href="#css" class="nav-link">CSS</a></li>
+          <li><a href="#javascript" class="nav-link">JavaScript</a></li>
+          <li><a href="#bonus_objects" class="nav-link">Bonus: Objetos</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main id='main-doc'>
-      <section id='introduction' class='main-section'>
+    <main id="main-doc">
+      <section id="introduction" class="main-section">
         <header>
           <h2>Introducción</h2>
         </header>
@@ -35,7 +36,7 @@
           aspectos, como elegir marcos de JavaScript para crear el sitio web.
         </p>
       </section>
-      <section id='web_page' class='main-section'>
+      <section id="web_page" class="main-section">
         <header>
           <h2>Página web</h2>
         </header>
@@ -49,7 +50,7 @@
           codificar la apariencia por separado dentro de cada elemento HTML.
         </p>
       </section>
-      <section id='html' class='main-section'>
+      <section id="html" class="main-section">
         <header>
           <h2>HTML</h2>
         </header>
@@ -70,7 +71,7 @@
           historia e información técnica. Aquí, lo más importante es que ese texto reutilizable proporciona algunos valores predeterminados significativos.
         </p>
       </section>
-      <section id='css' class='main-section'>
+      <section id="css" class="main-section">
         <header>
           <h2>CSS</h2>
         </header>
@@ -79,11 +80,9 @@
           y aplicarle esquinas redondeadas o asignarle un fondo degradado. La CSS se encarga de determinar la apariencia y respuesta de los hipervínculos cuando se interactúa con ellos, aunque la dirección de destino se define en HTML. En CSS3,
           también puede realizar efectos de animación sofisticados.
         </p>
-        <p>
-            Para enlazar un archivo CSS externo desde HTML se debe usar la siguiente etiqueta dentro del head, con el nombre del archivo CSS.
-        </p>
+        <p>Para enlazar un archivo CSS externo desde HTML se debe usar la siguiente etiqueta dentro del head, con el nombre del archivo CSS.</p>
         <pre>
-            <code>&lt;link rel='stylesheet' href='tu_archivo.css'&gt;</code>
+    <code>&lt;link rel='stylesheet' href='tu_archivo.css'&gt;</code>
         </pre>
         <h3>Reglas de CSS</h3>
         <p>
@@ -91,90 +90,126 @@
           paredes de azul o elegir madera para los suelos. Selecciona una habitación y define reglas para el aspecto que debe tener. Puede aplicar el mismo estilo a varias salas, lo mismo que en CSS. Veamos el siguiente ejemplo.
         </p>
         <pre>
-            <code>
-                body {
-                    font-family: monospace;
-                }
-                
-                ul {
-                    font-family: helvetica;
-                }
+        <code>
+    body {
+        font-family: monospace;
+    }
+    
+    ul {
+        font-family: helvetica;
+    }
 
-                li {
-                    list-style: circle;
-                }
-                  
-                .list {
-                list-style: square;
-                }
-                
-                #msg {
-                font-family: monospace;
-                }
-            </code>
+    li {
+        list-style: circle;
+    }
+        
+    .list {
+    list-style: square;
+    }
+    
+    #msg {
+    font-family: monospace;
+    }
+        </code>
         </pre>
         <p>
-            Puede usar reglas de CSS para aplicar estilo al código HTML. El elemento de lista sin ordenar <code>ul {}</code> es un selector que selecciona el elemento HTML <code>&lt;ul&gt;</code> al que aplicar estilos. La declaración es <code>font-family: helvetica</code> y determina cuál debe ser el estilo. El nombre de la propiedad es <code>font-family</code> y el valor es <code>helvetica</code>. Juntos, la propiedad y el valor constituyen un par clave-valor. Lo que se selecciona es un elemento existente que se ha definido antes en HTML (<code>&lt;body&gt;</code> y <code>&lt;ul&gt;</code>). 
+          Puede usar reglas de CSS para aplicar estilo al código HTML. El elemento de lista sin ordenar
+          <code>ul {}</code>
+          es un selector que selecciona el elemento HTML
+          <code>&lt;ul&gt;</code>
+          al que aplicar estilos. La declaración es
+          <code>font-family: helvetica</code>
+          y determina cuál debe ser el estilo. El nombre de la propiedad es
+          <code>font-family</code>
+          y el valor es
+          <code>helvetica</code>
+          . Juntos, la propiedad y el valor constituyen un par clave-valor. Lo que se selecciona es un elemento existente que se ha definido antes en HTML (
+          <code>&lt;body&gt;</code>
+          y
+          <code>&lt;ul&gt;</code>
+          ).
         </p>
         <p>
-            Los identificadores y los selectores de clase permiten aplicar estilos a los nombres de atributo personalizados en el código HTML. Un identificador se usa para definir el estilo de un elemento, mientras que las clases pueden aplicar estilos a varios elementos. En el ejemplo anterior, el selector de clases list tiene un prefijo de punto, mientras que el selector de Id. es msg y tiene un prefijo de signo de libra. Los nombres pueden ser arbitrarios, siempre que coincidan con lo que haya definido en el código HTML.
+          Los identificadores y los selectores de clase permiten aplicar estilos a los nombres de atributo personalizados en el código HTML. Un identificador se usa para definir el estilo de un elemento, mientras que las clases pueden aplicar estilos
+          a varios elementos. En el ejemplo anterior, el selector de clases list tiene un prefijo de punto, mientras que el selector de Id. es msg y tiene un prefijo de signo de libra. Los nombres pueden ser arbitrarios, siempre que coincidan con lo
+          que haya definido en el código HTML.
         </p>
       </section>
-      <section id='javascript' class='main-section'>
+      <section id="javascript" class="main-section">
         <header>
-            <h2>JavaScript</h2>
+          <h2>JavaScript</h2>
         </header>
         <p>
-            JavaScript (o ECMAScript) es un lenguaje de programación que permite agregar interactividad a la página web. Al hacer clic en un botón, JavaScript es el código que define el evento o el comportamiento que tendrá lugar como, por ejemplo, abrir una ventana emergente. Con JavaScript, puede agregar o quitar contenido de la página web, como texto, sin volver a cargarla. Como desarrollador web, puede usar el explorador para probar y obtener información sobre los scripts.
+          JavaScript (o ECMAScript) es un lenguaje de programación que permite agregar interactividad a la página web. Al hacer clic en un botón, JavaScript es el código que define el evento o el comportamiento que tendrá lugar como, por ejemplo,
+          abrir una ventana emergente. Con JavaScript, puede agregar o quitar contenido de la página web, como texto, sin volver a cargarla. Como desarrollador web, puede usar el explorador para probar y obtener información sobre los scripts.
         </p>
         <p>
-            CSS y JavasCript se pueden agregar directamente a la página HTML, pero es mejor no hacerlo. Para agregar archivos externos de JavaScript se utiliza la etiqueta <code>&lt;script&gt;</code> en  <code>&lt;head&gt;</code> o en otro lugar de  <code>&lt;body&gt;</code>. Sin embargo, colocar  <code>&lt;script&gt;</code> al final de la sección <code>&lt;body&gt;</code> permite que primero se muestre todo el contenido de la página y, después, se cargue el script.
+          CSS y JavasCript se pueden agregar directamente a la página HTML, pero es mejor no hacerlo. Para agregar archivos externos de JavaScript se utiliza la etiqueta <code>&lt;script&gt;</code> en  <code>&lt;head&gt;</code> o en otro lugar de  <code>&lt;body&gt;</code>. Sin embargo, colocar  <code>&lt;script&gt;</code> al final de la sección <code>&lt;body&gt;</code> permite que primero se muestre todo el contenido de la página y, después, se cargue el script.
         </p>
         <pre>
-            <code>&lt;script src='tu_archivo.js'&gt;</script></code>
+    <code>&lt;script src='tu_archivo.js'&gt;</script></code>
         </pre>
         <h3>Conceptos básicos en JavaScript</h3>
         <ul>
-            <li> 
-                <span>Variables:</span> Las variables básicamente son contenedores de valores (como números o cadenas de texto). Creas una variable con la palabra clave <code>let</code>  (o <code>var</code>) seguida de un nombre para tu variable. Las constantes se utilizan para almacenar valores que no deseas modificar y se crean con la palabra clave <code>const</code>. Puedes asignar un valor a tu variable o constante con un signo igual (=) seguido del valor que deseas darle.
-            </li>
-            <li>
-                <span>Funciones:</span> Las funciones son bloques de código reutilizable que puedes escribir una vez y ejecutar una y otra vez, ahorrando la necesidad de repetir el código todo el tiempo. Son realmente útiles. Hay varias maneras de definir funciones, pero por ahora nos concentraremos en un tipo simple. Aquí hemos definido una función usando la palabra clave <code>function</code>, seguida de un nombre, con paréntesis después de él. Después de eso ponemos dos llaves (<code>{ }</code>). Dentro de las llaves se encuentra todo el código que queremos ejecutar cuando llamamos a la función. Cuando queramos ejecutar el código, escribimos el nombre de la función seguido de los paréntesis.
-            </li>
-            <li>
-                <span>Operadores:</span> Los operadores de JavaScript nos permiten realizar pruebas, hacer cálculos matemáticos, unir cadenas y otras cosas similares.
-            </li>
-            <li>
-                <span>Condicionales:</span>  Un bloque de código condicional te permite ejecutar código de manera selectiva, dependiendo de si una determinada condición es verdadera o no. Se parece un poco a una función, pero no lo es. La forma más simple de bloque condicional comienza con la palabra clave <code>if</code>, luego algunos paréntesis, luego unas llaves. Dentro del paréntesis incluimos una prueba. Si la prueba devuelve true, ejecutamos el código dentro de las llaves. Si no, no lo hacemos y pasamos al siguiente segmento del código.
-            </li>
-            <li>
-                <span>Bucles:</span> Los bucles son un muy importante concepto en programación, estos te permiten seguir ejecutando un fragmento de código una y otra vez, hasta que se cumpla una determinada condición.
-            </li>
-            <li>
-                <span>Eventos:</span> Los eventos son cosas que suceden en el navegador — se hace clic en un botón, se carga una página, se reproduce un video, etc. — en respuesta a lo cual podemos ejecutar bloques de código. Las construcciones que escuchan el evento que ocurre se denominan escuchas de eventos, y los bloques de código que se ejecutan en respuesta a la activación del evento se denominan controladores de eventos.
-            </li>
+          <li>
+            <span>Variables:</span>
+            Las variables básicamente son contenedores de valores (como números o cadenas de texto). Creas una variable con la palabra clave
+            <code>let</code>
+            (o
+            <code>var</code>
+            ) seguida de un nombre para tu variable. Las constantes se utilizan para almacenar valores que no deseas modificar y se crean con la palabra clave
+            <code>const</code>
+            . Puedes asignar un valor a tu variable o constante con un signo igual (=) seguido del valor que deseas darle.
+          </li>
+          <li>
+            <span>Funciones:</span>
+            Las funciones son bloques de código reutilizable que puedes escribir una vez y ejecutar una y otra vez, ahorrando la necesidad de repetir el código todo el tiempo. Son realmente útiles. Hay varias maneras de definir funciones, pero por
+            ahora nos concentraremos en un tipo simple. Aquí hemos definido una función usando la palabra clave
+            <code>function</code>
+            , seguida de un nombre, con paréntesis después de él. Después de eso ponemos dos llaves (
+            <code>{ }</code>
+            ). Dentro de las llaves se encuentra todo el código que queremos ejecutar cuando llamamos a la función. Cuando queramos ejecutar el código, escribimos el nombre de la función seguido de los paréntesis.
+          </li>
+          <li>
+            <span>Operadores:</span>
+            Los operadores de JavaScript nos permiten realizar pruebas, hacer cálculos matemáticos, unir cadenas y otras cosas similares.
+          </li>
+          <li>
+            <span>Condicionales:</span>
+            Un bloque de código condicional te permite ejecutar código de manera selectiva, dependiendo de si una determinada condición es verdadera o no. Se parece un poco a una función, pero no lo es. La forma más simple de bloque condicional
+            comienza con la palabra clave
+            <code>if</code>
+            , luego algunos paréntesis, luego unas llaves. Dentro del paréntesis incluimos una prueba. Si la prueba devuelve true, ejecutamos el código dentro de las llaves. Si no, no lo hacemos y pasamos al siguiente segmento del código.
+          </li>
+          <li>
+            <span>Bucles:</span>
+            Los bucles son un muy importante concepto en programación, estos te permiten seguir ejecutando un fragmento de código una y otra vez, hasta que se cumpla una determinada condición.
+          </li>
+          <li>
+            <span>Eventos:</span>
+            Los eventos son cosas que suceden en el navegador — se hace clic en un botón, se carga una página, se reproduce un video, etc. — en respuesta a lo cual podemos ejecutar bloques de código. Las construcciones que escuchan el evento que
+            ocurre se denominan escuchas de eventos, y los bloques de código que se ejecutan en respuesta a la activación del evento se denominan controladores de eventos.
+          </li>
         </ul>
       </section>
-      <section id='bonus_objects' class='main-section'>
+      <section id="bonus_objects" class="main-section">
         <header>
-            <h2>Bonus: Objetos</h2>
+          <h2>Bonus: Objetos</h2>
         </header>
         <p>
-            Un objeto es una colección de propiedades y funciones relacionadas almacenadas en un solo grupo. En JavaScript, un objeto es un entidad independiente con propiedades y tipos. Compáralo con una taza, por ejemplo. Una taza es un objeto con propiedades. Una taza tiene un color, un diseño, un peso, un material del que está hecha, etc. Del mismo modo, los objetos de JavaScript pueden tener propiedades que definan sus características.
+          Un objeto es una colección de propiedades y funciones relacionadas almacenadas en un solo grupo. En JavaScript, un objeto es un entidad independiente con propiedades y tipos. Compáralo con una taza, por ejemplo. Una taza es un objeto con
+          propiedades. Una taza tiene un color, un diseño, un peso, un material del que está hecha, etc. Del mismo modo, los objetos de JavaScript pueden tener propiedades que definan sus características.
         </p>
-        <p>
-            Podemos utilizar un iniciador de objetos, que es una lista delimitada por comas de cero o más pares de nombres de propiedad y valores asociados de un objeto, encerrados entre llaves ({}):
-        </p>
+        <p>Podemos utilizar un iniciador de objetos, que es una lista delimitada por comas de cero o más pares de nombres de propiedad y valores asociados de un objeto, encerrados entre llaves ({}):</p>
         <pre>
-            <code>
-                let miObjeto = {
-                    nombre: 'taza',
-                    color: 'amarillo',
-                    material: 'porcelana'
-                };
-            </code>
+    <code>
+    let miObjeto = {
+        nombre: 'taza',
+        color: 'amarillo',
+        material: 'porcelana'
+    };
+    </code>
         </pre>
-
       </section>
     </main>
   </body>
