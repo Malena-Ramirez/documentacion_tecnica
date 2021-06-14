@@ -47,6 +47,7 @@ h1 {
   color: inherit;
   padding-left: 30px;
   display: block;
+  padding-top: 8px;
 }
 
 .nav-link:hover {
@@ -78,6 +79,11 @@ pre {
 pre {
   border-left: 3px solid #964126;
   overflow: auto;
+  padding-top: 15px;
+}
+
+.group-list>li>span{
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
